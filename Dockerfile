@@ -1,17 +1,15 @@
+# Используем официальный Python образ
 FROM python:3.11-slim
 
-# Устанавливаем gcc и дополнительные библиотеки
-RUN apt-get update && apt-get install -y gcc python3-dev libffi-dev && rm -rf /var/lib/apt/lists/*
+# Устанавливаем build-essential и другие необходимые пакеты
+RUN apt-get update && apt-get install -y build-essential gcc
 
-# Устанавливаем рабочую директорию
-WORKDIR /app
+# Устанавливаем зависимости
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Копируем все файлы проекта в контейнер
-COPY . /app
+COPY . .
 
-# Устанавливаем зависимости из requirements.txt
-RUN pip install --upgrade pip
-RUN pip install -r requirements.txt
-
-# Запускаем бота
-CMD ["python", "bot.py"]
+# Запускаем приложение
+CMD ["python", "bot.py"]  # Замените на ваш главный файл
