@@ -1,4 +1,3 @@
-aiohttp
-gcc
-libffi-dev
-python3-dev
+aiogram==2.26
+gunicorn==20.1.0
+aiohttp==3.8.1
