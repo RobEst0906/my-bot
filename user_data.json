@@ -1,0 +1,18 @@
+{
+    "5796130007": {
+        "balance": 0,
+        "inventory": [
+            "gt710"
+        ],
+        "last_farm_time": "2025-02-20 08:48:08.383282",
+        "is_mining": false,
+        "mining_start_time": null
+    },
+    "5796130007": {
+        "balance": 100,
+        "inventory": [],
+        "last_farm_time": "2025-02-20 08:50:38.918179",
+        "is_mining": true,
+        "mining_start_time": "2025-02-20 08:50:41.850972"
+    }
+}
