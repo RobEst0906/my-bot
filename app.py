@@ -5,6 +5,17 @@ from aiogram.fsm.storage.memory import MemoryStorage
 from aiogram.filters import Command
 from datetime import datetime, timedelta
 
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return 'Hello, World!'
+
+if __name__ == '__main__':
+    app.run()
+
 
 API_TOKEN = '7952778498:AAFSY_hV_e_47AmMqdEU7WDs6WFyiIL_C0o'
 
